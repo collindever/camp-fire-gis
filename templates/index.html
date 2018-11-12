@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block body %}
+<h2>Camp Fire LandSat-8 Infrared Maps</h2>
+<p>I was inspires to create this map because of some images circulating around
+  the internet.  Landsat-8 a satellite shared by NASA and USGS.  On November 8,
+  2018 at 10:45AM about 4 hour and 15 minutes after the start of the fire
+  LandSat took this image.</p>
+  <div id="image-compare">
+    <div id="NASA-Image">
+      <h4> From visibleearth.nasa.gov </h4>
+      <img src="{{url_for('static', filename='campfireNASA.jpg')}}" />
+    </div>
+    <div id="NEWS-Image">
+      <h4> From cnet.com </h4>
+      <img src="{{url_for('static', filename='campfireNEWS.jpg')}}" />
+    </div>
+  </div>
+<p>Most New Sources are circulating this image with the text removed, ignoring
+  all context for this photo.  Red added to the photo is from an infrared band
+  camera aboard the satelitte.  Without context it looks like these are flames
+  visible from space.  Below is an interactive map of the highest regions of
+  infrared measured by the satelitte in this picture.  I am not a professional
+  this data should not be used for anything other than insight. Below are the
+  steps I took to create this data to maintain transparency.</p>
+  <div id="main">
+    <div id="map"></div>
+  </div>
+  <h3>How it Was Made</h3>
+  <p>The original satellite image was obtained from <a href="https://earthexplorer.usgs.gov/">Earth Explorer</a>
+  a source for satillite images from the USGS and NASA. The polygon shape was
+  created with QGIS the steps I took were to:
+    <ul>
+      <li>Use Georefrencer to align the image to GPS positions</li>
+      <li>Using the infrared band I created a mask of values greater than 105 (107 max)</li>
+      <li>Ran Polygonize to convert to shape file</li>
+      <li>Split the vector Layer based on Mask Value</li>
+      <li>Manually removed shapes not related to the fire</li>
+      <li>Exported to geojson</li>
+    </ul>
+  This was my first time using QGIS which is why I say to take this information
+  with a grain of salt.  If you have expierence in this field and can confirm or
+  correct my workflow I would appreciate it.</p>
+<script type="text/javascript" src="{{url_for('static', filename='main.js')}}"></script>
+{% endblock %}

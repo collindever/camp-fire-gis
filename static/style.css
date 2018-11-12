@@ -1,0 +1,43 @@
+#main {
+  width: 98%;
+  height: 98%;
+}
+
+#map {
+  margin: auto;
+  top: 8%;
+  height: 500px;
+  width: 900px;
+}
+
+#NASA-Image {
+  width: 40%;
+  padding: 5%;
+}
+
+#NEWS-Image {
+  width: 40%;
+  padding: 5%;
+}
+
+#image-compare {
+  display: inline-flex;
+}
+
+h4 {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  background-color: #BFBFBF;
+  padding: 2.5%;
+}
+
+h2 {
+  text-align: center;
+}
+

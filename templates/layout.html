@@ -1,0 +1,13 @@
+<!doctype html>
+<title>Leaflet</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='leaflet.css') }}" />
+<script src="{{ url_for('static', filename='leaflet.js') }}"></script>
+<script src="{{ url_for('static', filename='geomac1111.js') }}"></script>
+<script src="{{ url_for('static', filename='geomac1110.js') }}"></script>
+<script src="{{ url_for('static', filename='geomac1109.js') }}"></script>
+<script src="{{ url_for('static', filename='geomac1108.js') }}"></script>
+<script src="{{ url_for('static', filename='LANDSAT8-IR.js') }}"></script>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class=page>
+  {% block body %}{% endblock %}
+</div>
