@@ -32,6 +32,10 @@ img {
   max-width: 100%;
 }
 
+a {
+  color: #5e76ae;
+}
+
 html {
   background-color: #BFBFBF;
   padding: 2.5%;
