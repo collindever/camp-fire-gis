@@ -7,11 +7,14 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
     accessToken: 'pk.eyJ1IjoiY29sbGluZGV2ZXIiLCJhIjoiY2pqbDF1OWM4MDMzODNwczM4Y2RjbGRodSJ9.yZGZgHkkPnbCSVBUE2IhbA'
 }).addTo(map);
 
-// L.geoJson(CAMP1111, {style: styleRecent}).addTo(map);
-// L.geoJson(CAMP1110, {style: stylePast}).addTo(map);
-// L.geoJson(CAMP1109, {style: stylePast}).addTo(map);
-// L.geoJson(CAMP1108, {style: stylePast}).addTo(map);
-L.geoJson(LANDSATIR1108, {style: stylePast}).addTo(map);
+L.geoJson(CAMP1114, {style: styleRecent}).addTo(map);
+L.geoJson(CAMP1113, {style: stylePast}).addTo(map);
+L.geoJson(CAMP1112, {style: stylePast}).addTo(map);
+L.geoJson(CAMP1111, {style: stylePast}).addTo(map);
+L.geoJson(CAMP1110, {style: stylePast}).addTo(map);
+L.geoJson(CAMP1109, {style: stylePast}).addTo(map);
+L.geoJson(CAMP1108, {style: stylePast}).addTo(map);
+// L.geoJson(LANDSATIR1108, {style: stylePast}).addTo(map);
 
 
 function styleRecent(feature) {
